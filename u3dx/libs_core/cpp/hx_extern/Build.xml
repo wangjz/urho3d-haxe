@@ -1,0 +1,95 @@
+<xml>
+	<set name="URHO_PROJECT" value="${haxelib:u3dx}/u3dx/libs_core/cpp/native_project"/>
+	<set name="URHO_HXEXTERN" value="${haxelib:u3dx}/u3dx/libs_core/cpp/native_project/hxcpp_extern"/>
+	<set name="URHO_ROOT" value="${URHO_PROJECT}/Urho3d"/>
+	<set name="URHO_SOURCE" value="${URHO_ROOT}/Source"/>
+	<set name="URHO_ENGINE" value="${URHO_SOURCE}/Engine"/>
+	<set name="URHO_THIRDPARTY" value="${URHO_SOURCE}/ThirdParty"/>
+	<set name="URHO_LIB" value="${URHO_PROJECT}/Lib"/>
+	<files id="haxe">
+		<!--<compilerflag value="-IC:\Program Files\Microsoft DirectX SDK (June 2010)\Include"/>-->
+		<compilerflag value="-I${URHO_PROJECT}"/>
+		<compilerflag value="-I${URHO_HXEXTERN}"/>
+		<compilerflag value="-I${URHO_ENGINE}"/>
+		<compilerflag value="-I${URHO_ENGINE}/Audio"/>
+		<compilerflag value="-I${URHO_ENGINE}/Container"/>
+		<compilerflag value="-I${URHO_ENGINE}/Core"/>
+		<compilerflag value="-I${URHO_ENGINE}/Engine"/>
+		<compilerflag value="-I${URHO_ENGINE}/Engine/Math"/>
+		<compilerflag value="-I${URHO_ENGINE}/Graphics"/>
+		<compilerflag value="-I${URHO_ENGINE}/Input"/>
+		<compilerflag value="-I${URHO_ENGINE}/IO"/>
+		<compilerflag value="-I${URHO_ENGINE}/LuaScript"/>
+		<compilerflag value="-I${URHO_ENGINE}/Math"/>
+		<compilerflag value="-I${URHO_ENGINE}/Navigation"/>
+		<compilerflag value="-I${URHO_ENGINE}/Network"/>
+		<compilerflag value="-I${URHO_ENGINE}/Physics"/>
+		<compilerflag value="-I${URHO_ENGINE}/Resource"/>
+		<compilerflag value="-I${URHO_ENGINE}/Scene"/>
+		<compilerflag value="-I${URHO_ENGINE}/Script"/>
+		<compilerflag value="-I${URHO_ENGINE}/UI"/>
+		<compilerflag value="-I${URHO_ENGINE}/Urho2D"/>
+		<compilerflag value="-I${URHO_THIRDPARTY}/Box2D"/>
+		<compilerflag value="-I${URHO_THIRDPARTY}/Bullet/src"/>
+		<compilerflag value="-I${URHO_THIRDPARTY}/kNet/include"/>
+		<compilerflag value="-I${URHO_THIRDPARTY}/SDL/include"/>
+		<file name="${URHO_HXEXTERN}/U3dxMain.cpp">
+			<depend name="${URHO_ENGINE}/Engine/Application.h"/>
+			<depend name="${URHO_ENGINE}/Engine/Engine.h"/>
+			<depend name="${URHO_ENGINE}/Core/CoreEvents.h"/>
+			<depend name="${URHO_ENGINE}/Input/InputEvents.h"/>
+			<depend name="${URHO_ENGINE}/UI/UIEvents.h"/>
+			<depend name="${URHO_HXEXTERN}/U3dxMain.h"/>
+			<depend name="include/u3dx/libs_core/cpp/hx_package/U3dxLib.h"/>
+			<depend name="include/u3dx/libs_core/cpp/hx_package/events/UpdateEvent.h"/>
+			<depend name="include/u3dx/libs_core/cpp/hx_package/events/KeyBoardEvent.h"/>
+			<depend name="include/u3dx/libs_core/cpp/hx_package/events/UIEvent.h"/>
+		</file>
+	</files>
+	
+	<compiler id="MSVC" exe="cl.exe" if="windows">
+		<flag value="-DHXCPP_FLOAT32"/>
+	</compiler>
+	<!--<compiler id="MSVC" exe="cl.exe" if="windows">-->
+		<!--<flag value="-DURHO3D_STATIC_DEFINE"/>-->
+		<!--
+		 <flag value="-MD"/>
+		 <flag value="-Ob2"/>
+		 <flag value="-FD"/>
+		 <flag value="-EHsc"/>
+		 
+		 <flag value="-GS-"/>
+		 <flag value="-arch:SSE"/>
+		 <flag value="-fp:fast"/>
+		 <flag value="-W3"/>
+		 <flag value="-nologo"/>
+		 <flag value="-c"/>
+		 <flag value="-Zi"/>
+		 <flag value="-TP"/>
+		 <flag value="-errorReport:prompt"/>
+		 -->
+	<!--</compiler>-->
+	<linker id="exe" exe="link.exe" unless="winrt">
+		<flag value="-INCREMENTAL:NO"/>
+		<!--<flag value="-NODEFAULTLIB:MSVCRT.lib"/>-->
+	</linker>
+	<target id="haxe">
+		<lib name="kernel32.lib"/>
+		<lib name="gdi32.lib"/>
+		<lib name="winspool.lib"/>
+		<lib name="shell32.lib"/>
+		<lib name="ole32.lib"/>
+		<lib name="oleaut32.lib"/>
+		<lib name="uuid.lib"/>
+		<lib name="comdlg32.lib"/>
+		<lib name="advapi32.lib"/>
+		<lib name="winmm.lib"/>
+		<lib name="imm32.lib"/>
+		<lib name="version.lib"/>
+		<lib name="ws2_32.lib"/>
+		<lib name="dbghelp.lib"/>
+		<lib name="C:\Program Files\Microsoft DirectX SDK (June 2010)\Lib\x86\d3d9.lib"/>
+		<lib name="C:\Program Files\Microsoft DirectX SDK (June 2010)\Lib\x86\d3dcompiler.lib"/>
+		<lib name="${URHO_LIB}/Urho3D.lib"/>
+	</target>
+</xml>

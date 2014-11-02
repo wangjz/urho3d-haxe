@@ -1,0 +1,11 @@
+[Sun Nov 02 11:22:38 2014] INFO: Opened log file hello.log
+[Sun Nov 02 11:22:38 2014] INFO: Created 1 worker thread
+[Sun Nov 02 11:22:38 2014] INFO: Added resource path C:/HaxeToolkit/haxe/lib/u3dx/0/test/bin/CoreData/
+[Sun Nov 02 11:22:38 2014] INFO: Added resource path C:/HaxeToolkit/haxe/lib/u3dx/0/test/bin/Data/
+[Sun Nov 02 11:22:38 2014] WARNING: Skipped autoload folder Extra as it does not exist
+[Sun Nov 02 11:22:38 2014] INFO: Created Direct3D9 device
+[Sun Nov 02 11:22:38 2014] INFO: Set screen mode 800x600 windowed
+[Sun Nov 02 11:22:38 2014] INFO: Initialized input
+[Sun Nov 02 11:22:38 2014] INFO: Initialized user interface
+[Sun Nov 02 11:22:38 2014] INFO: Initialized renderer
+[Sun Nov 02 11:22:38 2014] INFO: Set audio mode 44100 Hz stereo interpolated

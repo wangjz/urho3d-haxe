@@ -1,0 +1,15 @@
+package u3dx.libs_core.cpp.hx_package.navigation;
+
+/**
+ * ...
+ * @author ...
+ */
+class NavigationMesh
+{
+
+	public function new() 
+	{
+		
+	}
+	
+}

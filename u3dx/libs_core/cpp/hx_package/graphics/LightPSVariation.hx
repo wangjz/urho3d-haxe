@@ -1,0 +1,27 @@
+package u3dx.libs_core.cpp.hx_package.graphics;
+
+/**
+ * ...
+ * @author ...
+ */
+class LightPSVariation
+{
+
+	LPS_NONE = 0,
+    LPS_SPOT,
+    LPS_POINT,
+    LPS_POINTMASK,
+    LPS_SPEC,
+    LPS_SPOTSPEC,
+    LPS_POINTSPEC,
+    LPS_POINTMASKSPEC,
+    LPS_SHADOW,
+    LPS_SPOTSHADOW,
+    LPS_POINTSHADOW,
+    LPS_POINTMASKSHADOW,
+    LPS_SHADOWSPEC,
+    LPS_SPOTSHADOWSPEC,
+    LPS_POINTSHADOWSPEC,
+    LPS_POINTMASKSHADOWSPEC,
+    MAX_LIGHT_PS_VARIATIONS
+}

@@ -1,0 +1,14 @@
+{
+  "name": "u3dx",
+  "url": "",
+  "license": "BSD",
+  "tags": [ "haxe", "urho3d", "cpp" ],
+  "description": "u3dx",
+  "version": "0",
+  "releasenote": "See Changes.md",
+  "contributors": ["wangjz"],
+  "binaryversion": 1,
+  "dependencies": {
+
+  }
+}
