@@ -4,11 +4,12 @@ package u3dx.libs_core.cpp.hx_package.math;
  * ...
  * @author ...
  */
-class Vector2
+class IntVector2
 {
 
-	public function new()
+	public function new() 
 	{
 		
 	}
+	
 }
