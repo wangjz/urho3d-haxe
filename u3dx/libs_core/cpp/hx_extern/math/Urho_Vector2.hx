@@ -1,4 +1,5 @@
 package u3dx.libs_core.cpp.hx_extern.math;
+import cpp.Pointer;
 @:include("Urho3d/Source/Engine/Math/Vector2.h")
 /**
  * ...
@@ -9,8 +10,12 @@ package u3dx.libs_core.cpp.hx_extern.math;
 @:native("Urho3D::Vector2")
 extern class Urho_Vector2
 {
+	@:native("&Urho3D::Vector2")
+	public static function createPointer(x:Float, y:Float):Pointer<Urho_Vector2>;
+	
 	@:native("Urho3D::Vector2")
-	public static function create(v1:Float,v2:Float):Urho_Vector2;
+	public static function create(x:Float, y:Float):Urho_Vector2;
+	
 	public function Normalize():Void;
 	//Vector2Data
 	public function toArray():Array<Int>;
