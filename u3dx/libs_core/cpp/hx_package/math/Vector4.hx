@@ -66,27 +66,27 @@ import u3dx.libs_core.cpp.hx_extern.math.Urho_Vector4;
 		return [this.value.x_,this.value.y_,this.value.z_,this.value.w_];
 	}
 	
-	public function dotProduct(v:Vector4):Vector4
+	public inline function dotProduct(v:Vector4):Vector4
 	{
 		return this.value.DotProduct(v.value);
 	}
 	
-	public function absDotProduct(v:Vector4):Vector4
+	public inline function absDotProduct(v:Vector4):Vector4
 	{
 		return this.value.AbsDotProduct(v.value);
 	}
 	
-	public function lerp(v:Vector4):Vector4
+	public inline function lerp(v:Vector4):Vector4
 	{
 		return this.value.Lerp(v.value);
 	}
 	
-	public function equals(v:Vector4):Vector4
+	public inline function equals(v:Vector4):Vector4
 	{
 		return this.value.Equals(v.value);
 	}
 	
-	public function isNaN():Bool
+	public inline function isNaN():Bool
 	{
 		return this.value.isNaN();
 	}
